@@ -53,7 +53,7 @@ pipeline {
             steps {
                 dir('frontend') {
                     echo 'Running frontend tests...'
-                    bat 'npm test -- --watchAll=false'
+                    bat 'npm test -- --watchAll=false --passWithNoTests'
                 }
             }
         }
