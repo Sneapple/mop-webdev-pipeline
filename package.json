@@ -1,0 +1,9 @@
+{
+    "name": "mop-webdev-pipeline",
+    "version": "1.0.0",
+    "description": "Full-stack web app with CI/CD pipeline using Jenkins",
+    "private": true,
+    "scripts": {},
+    "license": "MIT"
+  }
+  
