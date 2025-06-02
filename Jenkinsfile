@@ -58,6 +58,21 @@ pipeline {
             }
         }
 
+        stage('Code Quality - SonarCloud') {
+    steps {
+        echo 'Running SonarCloud scan...'
+        bat """
+            sonar-scanner ^
+            -Dsonar.projectKey=Sneapple_mop-webdev-pipeline ^
+            -Dsonar.organization=sneapple ^
+            -Dsonar.sources=. ^
+            -Dsonar.host.url=https://sonarcloud.io ^
+            -Dsonar.login=%SONAR_TOKEN%
+        """
+    }
+}
+
+
         stage('Deploy (Dev/Test)') {
             steps {
                 echo 'Deploying to dev environment (placeholder)...'
