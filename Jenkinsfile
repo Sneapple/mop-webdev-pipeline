@@ -16,7 +16,7 @@ pipeline {
             steps {
                 dir('backend') {
                     echo 'Installing backend dependencies...'
-                    sh 'npm install'
+                    bat 'npm install'
                 }
             }
         }
@@ -25,7 +25,7 @@ pipeline {
             steps {
                 dir('frontend') {
                     echo 'Installing frontend dependencies...'
-                    sh 'npm install'
+                    bat 'npm install'
                 }
             }
         }
@@ -34,7 +34,7 @@ pipeline {
             steps {
                 dir('frontend') {
                     echo 'Building React app...'
-                    sh 'npm run build'
+                    bat 'npm run build'
                 }
             }
         }
@@ -44,7 +44,7 @@ pipeline {
                 dir('backend') {
                     echo 'Running backend tests...'
                     // Placeholder: Add real tests later
-                    sh 'echo "No backend tests yet"'
+                    bat 'echo "No backend tests yet"'
                 }
             }
         }
@@ -53,7 +53,7 @@ pipeline {
             steps {
                 dir('frontend') {
                     echo 'Running frontend tests...'
-                    sh 'npm test -- --watchAll=false'
+                    bat 'npm test -- --watchAll=false'
                 }
             }
         }
@@ -62,7 +62,7 @@ pipeline {
             steps {
                 echo 'Deploying to dev environment (placeholder)...'
                 // Here you can call Docker, SCP, or deploy to staging
-                sh 'echo "Deployed!"'
+                bat 'echo "Deployed!"'
             }
         }
     }
