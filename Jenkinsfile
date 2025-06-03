@@ -3,6 +3,7 @@ pipeline {
 
     environment {
         NODE_ENV = 'development'
+        SONAR_TOKEN = credentials('SONAR_TOKEN')
     }
 
     stages {
