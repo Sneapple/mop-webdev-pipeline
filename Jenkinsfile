@@ -60,7 +60,7 @@ pipeline {
         // 4️ Code Quality Stage
         stage('Code Quality - SonarCloud') {
             steps {
-                withCredentials([string(credentialsId: 'sonar-token', variable: 'SONAR_TOKEN')]) {
+                withCredentials([string(credentialsId: 'SONAR_TOKEN', variable: 'SONAR_TOKEN')]) {
                     echo 'Running SonarCloud scan...'
                     bat """
                         sonar-scanner ^
