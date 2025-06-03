@@ -68,7 +68,7 @@ pipeline {
             -Dsonar.organization=sneapple ^
             -Dsonar.sources=. ^
             -Dsonar.host.url=https://sonarcloud.io ^
-            -Dsonar.login=%SONAR_TOKEN%
+            -Dsonar.token=%SONAR_TOKEN%
         """
     }
 }
